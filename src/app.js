@@ -28,4 +28,15 @@ app.use(limiter);
 // static files
 app.use(express.static("public"));
 
+
+// routers 
+  // import router here : 
+import { userRouter } from "./routes/user.routes.js";
+
+
+app.use("api/v1/user" , userRouter)
+                  // http://localhost:8000/api/v1/user/register 
+                 // http://localhost:8000/api/v1/user/login
+
+
 export { app };

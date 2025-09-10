@@ -7,3 +7,8 @@ export default class ApiResponse {
     this.success = statusCode < 400; // 2xx & 3xx = true, 4xx & 5xx = false
   }
 }
+
+/*
+Agar statusCode 200–399 (success range) hoga to success = true hona chahiye.
+Agar statusCode >= 400 hoga to success = false hona chahiye.
+*/
